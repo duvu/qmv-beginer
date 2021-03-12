@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><span translate>Home</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let p of _36patterns">
+      <ion-card class="ion-text-center">
+        <img class="logo" [src]="p.url" alt="angular logo" />
+        <ion-card-content>
+          <ion-card-title>
+            <span translate>{{p.title}}</span>
+          </ion-card-title>
+          <p>
+            <app-loader [isLoading]="isLoading"></app-loader>
+            <q [hidden]="isLoading">{{ p.description }}</q>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+
+<!--Tổng hợp bởi Facebook Quất Mạnh Vào. Tin cậy: Cao/Vừa/Thấp dựa trên một số nguồn học liệu đề cập. Khi: mới tăng/tăng lâu == thường xảy ra ở giữa/cuối giai đoạn tăng; mới giảm/giảm lâu == thường xảy ra ở giữa/cuối giai đoạn giảm.-->
+
+<!--Sử dụng: tất cả các mẫu hình kĩ thuật đều cần ít nhất 2 điểm chạm (trên dưới) để được coi là phù hợp. Các mẫu hình "ngang" thường thể hiện có thể biến đổi theo hai hướng, tùy vào hướng và thời lượng của hướng trước đó. Khối lượng giao dịch trong khi lập mẫu hình thường không bất thường nhưng khi đổi hướng đi thường cao đột biến. Hình vẽ chỉ là tương đối. Các mẫu hình khác có thể là trường hợp đặc biệt của một trong các mẫu hình trên, ví dụ, cốc và tay cầm cũng gần tương tự như 3 đỉnh hay 2/3 đỉnh đáy cũng tương tự dao động ngang. Khi nhận diện mẫu hình, không nên cố ép suy nghĩ theo mẫu hình - bất cứ điều gì làm cho mẫu hình sai thì nên lập tức bỏ qua mẫu hình đó. Mẫu hình là để theo dõi hành vi bên bán và mua vì nó đặc biệt chứ không có ý nghĩa rằng nó đúng. Nên kết hợp với các chỉ số báo khác để ra quyết định. Cố gắng trả lời câu hỏi: Khi giá biến động như vậy nó nói gì về tâm lý của người mua và bán?-->
