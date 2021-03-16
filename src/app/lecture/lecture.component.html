@@ -7,5 +7,9 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-Lectures
+    <ion-list lines="none">
+        <ion-item [routerLink]="item.route" detail="true" *ngFor="let item of lectureList">
+            <ion-label>{{item.label}}</ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
