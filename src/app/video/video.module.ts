@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { VideoRoutingModule } from './video-routing.module';
+import { VideoComponent } from './video.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '@shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 
-import { SharedModule } from '@shared';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
 
 @NgModule({
+  declarations: [VideoComponent],
   imports: [
     CommonModule,
     TranslateModule,
     SharedModule,
     IonicModule,
-    HomeRoutingModule
-  ],
-  declarations: [HomeComponent],
+    VideoRoutingModule
+  ]
 })
-export class HomeModule {}
+export class VideoModule { }
