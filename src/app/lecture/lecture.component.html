@@ -1,15 +1,15 @@
 <ion-header>
-    <ion-toolbar color="primary">
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title><span translate>Lectures</span></ion-title>
-    </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><span translate>Lectures</span></ion-title>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-list lines="none">
-        <ion-item [routerLink]="item.route" detail="true" *ngFor="let item of lectureList">
-            <ion-label>{{item.label}}</ion-label>
-        </ion-item>
-    </ion-list>
+  <ion-list lines="none">
+    <ion-item [routerLink]="item.route" detail="true" *ngFor="let item of lectureList">
+      <ion-label>{{ item.label }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

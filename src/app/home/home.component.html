@@ -7,35 +7,34 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-<!--  <ion-list>-->
-<!--    <ion-item *ngFor="let item of _36patterns">-->
-<!--      <ion-thumbnail slot="start">-->
-<!--        <ion-img [src]="item.src"></ion-img>-->
-<!--      </ion-thumbnail>-->
-<!--      <ion-label>{{item.description}}</ion-label>-->
-<!--    </ion-item>-->
-<!--  </ion-list>-->
+  <!--  <ion-list>-->
+  <!--    <ion-item *ngFor="let item of _36patterns">-->
+  <!--      <ion-thumbnail slot="start">-->
+  <!--        <ion-img [src]="item.src"></ion-img>-->
+  <!--      </ion-thumbnail>-->
+  <!--      <ion-label>{{item.description}}</ion-label>-->
+  <!--    </ion-item>-->
+  <!--  </ion-list>-->
 
-  <ion-slides #slider [options]="slideOpts" (ionSlideNextEnd)="addMoreItems()">
+  <ion-slides #slider [options]="slideOpts" (ionSlideReachEnd)="addMoreItems()">
     <ion-slide *ngFor="let item of items">
       <ion-card class="ion-text-center">
-<!--        <img class="logo" [src]="p.url" alt="angular logo" />-->
-<!--        <img class="logo" [src]="p.url" alt="angular logo" />-->
+        <!--        <img class="logo" [src]="p.url" alt="angular logo" />-->
+        <!--        <img class="logo" [src]="p.url" alt="angular logo" />-->
         <ion-img [src]="item.src"></ion-img>
         <ion-card-content>
           <ion-card-title>
-            <span translate>{{item.title}}</span>
+            <span translate>{{ item.title }}</span>
           </ion-card-title>
           <p>
             <app-loader [isLoading]="isLoading"></app-loader>
-            <q [hidden]="isLoading">{{ item.description }}</q>
+            <span [hidden]="isLoading">{{ item.description }}</span>
           </p>
         </ion-card-content>
       </ion-card>
     </ion-slide>
   </ion-slides>
 </ion-content>
-
 
 <!--Tổng hợp bởi Facebook Quất Mạnh Vào. Tin cậy: Cao/Vừa/Thấp dựa trên một số nguồn học liệu đề cập. Khi: mới tăng/tăng lâu == thường xảy ra ở giữa/cuối giai đoạn tăng; mới giảm/giảm lâu == thường xảy ra ở giữa/cuối giai đoạn giảm.-->
 

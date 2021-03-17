@@ -1,6 +1,8 @@
 {
   "name": "qmv-beginer",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "fbd0f066"
 }

@@ -19,16 +19,32 @@ import { Lecture10Component } from './components/lecture10/lecture10.component';
 import { Lecture11Component } from './components/lecture11/lecture11.component';
 import { Lecture12Component } from './components/lecture12/lecture12.component';
 import { Lecture13Component } from './components/lecture13/lecture13.component';
-
+import { Foxandrabbit1Component } from './components/foxandrabbit1/foxandrabbit1.component';
+import { Foxandrabbit2Component } from './components/foxandrabbit2/foxandrabbit2.component';
+import { Foxandrabbit3Component } from './components/foxandrabbit3/foxandrabbit3.component';
+import { Cotan1Component } from './components/cotan1/cotan1.component';
 
 @NgModule({
-  declarations: [LectureComponent, Lecture1Component, Lecture2Component, Lecture3Component, Lecture4Component, Lecture5Component, Lecture6Component, Lecture7Component, Lecture8Component, Lecture9Component, Lecture10Component, Lecture11Component, Lecture12Component, Lecture13Component],
-  imports: [
-    CommonModule,
-    TranslateModule,
-    SharedModule,
-    IonicModule,
-    LectureRoutingModule
-  ]
+  declarations: [
+    LectureComponent,
+    Lecture1Component,
+    Lecture2Component,
+    Lecture3Component,
+    Lecture4Component,
+    Lecture5Component,
+    Lecture6Component,
+    Lecture7Component,
+    Lecture8Component,
+    Lecture9Component,
+    Lecture10Component,
+    Lecture11Component,
+    Lecture12Component,
+    Lecture13Component,
+    Foxandrabbit1Component,
+    Foxandrabbit2Component,
+    Foxandrabbit3Component,
+    Cotan1Component,
+  ],
+  imports: [CommonModule, TranslateModule, SharedModule, IonicModule, LectureRoutingModule],
 })
-export class LectureModule { }
+export class LectureModule {}

@@ -15,6 +15,7 @@ import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 @NgModule({
   imports: [
@@ -30,7 +31,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
-  providers: [Keyboard, StatusBar, SplashScreen],
+  providers: [Keyboard, StatusBar, SplashScreen, YoutubeVideoPlayer],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
