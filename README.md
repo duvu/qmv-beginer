@@ -145,3 +145,15 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - [Updating dependencies and tools](docs/updating.md)
 - [Using a backend proxy for development](docs/backend-proxy.md)
 - [Browser routing](docs/routing.md)
+
+
+###
+```shell script
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release-key.keystore dist/app-release-unsigned.apk 36-patterns
+```
+
+```shell script
+/home/beou/Android/build-tools/29.0.2/zipalign -f -v 4 app-release-unsigned.apk app-release.apk
+```
+
+
